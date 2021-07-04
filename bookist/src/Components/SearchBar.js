@@ -9,19 +9,20 @@ class SearchBar extends Component{
     }
 
     handleChange(){
-
+        this.props.add(this.state.input);
+        this.setState({ input: "" });
     }
 
-    handleSearch() {
+    handleSearch(){
         this.props.add(this.state.input);
         this.setState({ input: "" });
         }
 
     render(){
-        return <div>
+        return
                 <input
-                    <button onClick={this.handleSearch}>Search</button>
+                    onClick={this.handleSearch}/>
                     <button>Clear Search</button>
-                </div>
+                
     }
 }
